@@ -1,0 +1,24 @@
+<h1>Results Page</h1>
+
+<%var count=0,wcount=0%>
+
+<% parse.forEach((data)=>{ %>
+    <%count++%>  
+<% }) %>
+
+<li><p>Total Bullying Incidents Reported</p><%=count%></li>
+
+
+<% parse.forEach((data)=>{ %>
+     <%if(data.platform=="whatsapp"){%>
+         <%wcount++%>
+     <%}%>
+<% }) %>
+
+<li>Reported from Whatsapp: <%=wcount%></li>
+
+<li><%=parse[0].time_now.substring(8,10)%></li>
+
+
+
+
